@@ -12,10 +12,9 @@ I've identified two sources that may help with creating a dataset:
 1. [Approximatley 30,000 tennis court locations throughout the US](https://data.world/mglobel/tennis-courts)
 2. [Tennis court locations throughout the Washington, DC area](https://data.world/codefordc/tennis-court-sites)
 
-With the location data, I wrote a python script that will:
-- go to each coordinate location at a specific elevation, 
-- capture a screenshot,
-- and save the file to a test folder as a .png file 
+With the location data, I utilized the [Google Maps static imageAPI](https://developers.google.com/maps/documentation/maps-static?csw=1) to obtain uniform PNG files of each location.
+
+For each API call, I set the size parameter as `640x640` the map type as `satellite` and the zoom level as `20`.
 
 Once each file is saved to the test folder, I had to manually annotate each image with a bounding box.
 The tool I chose to annotate each image with was [Scalable](https://scalabel.ai/). 
