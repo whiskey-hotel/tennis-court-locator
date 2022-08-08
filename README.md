@@ -18,6 +18,6 @@ With the location data, I wrote a python script that will:
 - and save the file to a test folder as a .png file 
 
 Once each file is saved to the test folder, I had to manually annotate each image with a bounding box.
-The tool I chose to annotate each image with was [Scalable](https://scalabel.ai/).
+The tool I chose to annotate each image with was [Scalable](https://scalabel.ai/). 
 
 ### Training the model:
