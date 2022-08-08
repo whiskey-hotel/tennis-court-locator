@@ -9,8 +9,8 @@ With this project, I will be able to identify all local tennis courts without th
 The process of identifying tennis courts will require a bit of machine learning with object detection. 
 To my knowledge, a dataset that includes aerial images of tennis courts does not exist, therefore, I will have to create my own.
 I've identified two sources that may help with creating a dataset:
-1. [Approximatley 30,000 tennis court locations throughout the US] (https://data.world/mglobel/tennis-courts)
-2. [Tennis court locations throughout the Washington, DC area] (https://data.world/codefordc/tennis-court-sites)
+1. [Approximatley 30,000 tennis court locations throughout the US](https://data.world/mglobel/tennis-courts)
+2. [Tennis court locations throughout the Washington, DC area](https://data.world/codefordc/tennis-court-sites)
 
 With the location data, I wrote a python script that will:
 - go to each coordinate location at a specific elevation, 
@@ -18,6 +18,6 @@ With the location data, I wrote a python script that will:
 - and save the file to a test folder as a .png file 
 
 Once each file is saved to the test folder, I had to manually annotate each image with a bounding box.
-The tool I chose to annotate each image with was [Scalable] (https://scalabel.ai/).
+The tool I chose to annotate each image with was [Scalable](https://scalabel.ai/).
 
 ### Training the model:
