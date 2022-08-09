@@ -26,6 +26,18 @@ In order to utilize [Tensorflow’s object detection API](https://github.com/ten
 
 I generated a tf record from my XML format annotations with Tensor Flow's Object Detection [conversion script](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/using_your_own_dataset.md).
 
+In order to use TensorFlow on my system (macOS), I had to install `Miniforge` to create a seperate environment and then follow the [TensorFlow Installation Guide](https://developer.apple.com/metal/tensorflow-plugin/) for getting setup.
+
+I created the environment with:
+~~~
+    conda create --name tf python=3.9
+~~~
+
+Then I can activate and deactivate the environement with:
+~~~
+    conda deactivate
+    conda activate tf
+~~~
 I had to create a label map file, `labelmap.pbtxt`, to define the classes that are going to be used. 
 I only used one class, so this was a pretty simple file:
 ~~~
