@@ -1,0 +1,37 @@
+<annotation>
+	<folder>test-tennis-court-locator</folder>
+	<filename>Melrose Park.png</filename>
+	<path>/test-tennis-court-locator/Melrose Park.png</path>
+	<source>
+		<database>Unspecified</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>640</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>Court</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>231</xmin>
+			<ymin>241</ymin>
+			<xmax>320</xmax>
+			<ymax>424</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Court</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>341</xmin>
+			<ymin>240</ymin>
+			<xmax>431</xmax>
+			<ymax>424</ymax>
+		</bndbox>
+	</object>
+</annotation>
