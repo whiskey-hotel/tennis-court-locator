@@ -21,7 +21,7 @@ The tool I chose to annotate each image with was [MakeSense.AI](https://www.make
 The annotated images were exported in a .zip package containing files in the VOC XML format.
 
 ### Training the model:
-Need to create a label map file to define the classes that are going to be used. 
+Need to create a label map file, `labelmap.pbtxt`, to define the classes that are going to be used. 
 We only used one class, so this is a pretty simple file:
 ~~~
     item {
