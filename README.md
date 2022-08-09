@@ -14,18 +14,25 @@ I've identified two sources that may help with creating a dataset:
 
 With the location data, I utilized the [Google Maps static imageAPI](https://developers.google.com/maps/documentation/maps-static?csw=1) to obtain uniform PNG files of each location.
 
-For each API call, I set the size parameter as `640x640` the map type as `satellite` and the zoom level as `20`.
+For each API call, I set the size parameter as `640x640` and the map type as `satellite`.
+In order to provide variation in scale, I adjust the zoom level anywhere from `15` to `20`.
 
 Once each file is saved to the image folder, I had to manually annotate each image with a bounding box.
 The tool I chose to annotate each image with was [MakeSense.AI](https://www.makesense.ai/). 
 The annotated images were exported in a .zip package containing files in the VOC XML format.
 
 ### Training the model:
-Need to create a label map file, `labelmap.pbtxt`, to define the classes that are going to be used. 
-We only used one class, so this is a pretty simple file:
+In order to utilize [Tensorflow’s object detection API](https://github.com/tensorflow/models/tree/master/research/object_detection), I had to convert our annotated images into `TFRecord format`.
+
+I generated a tf record from my XML format annotations with Tensor Flow's Object Detection [conversion script](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/using_your_own_dataset.md).
+
+I had to create a label map file, `labelmap.pbtxt`, to define the classes that are going to be used. 
+I only used one class, so this was a pretty simple file:
 ~~~
     item {
         name: "Court"
         id: 1
     }
 ~~~
+
+I had to create an object detection training pipeline.
