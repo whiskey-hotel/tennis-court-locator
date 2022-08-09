@@ -16,7 +16,15 @@ With the location data, I utilized the [Google Maps static imageAPI](https://dev
 
 For each API call, I set the size parameter as `640x640` the map type as `satellite` and the zoom level as `20`.
 
-Once each file is saved to the test folder, I had to manually annotate each image with a bounding box.
-The tool I chose to annotate each image with was [Scalable](https://scalabel.ai/). 
+Once each file is saved to the image folder, I had to manually annotate each image with a bounding box.
+The tool I chose to annotate each image with was [MakeSense.AI](https://www.makesense.ai/). 
+The annotated images were exported in a .zip package containing files in the VOC XML format.
 
 ### Training the model:
+Need to create a label map file to define the classes that are going to be used. 
+We only used one class, so this is a pretty simple file:
+    item {
+        name: "Court"
+        id: 1
+    }
+
