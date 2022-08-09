@@ -23,8 +23,21 @@ The annotated images were exported in a .zip package containing files in the VOC
 ### Training the model:
 Need to create a label map file to define the classes that are going to be used. 
 We only used one class, so this is a pretty simple file:
+~~~
     item {
         name: "Court"
         id: 1
     }
-
+~~~
+```
+    item {
+        name: "Court"
+        id: 1
+    }
+```
+<code> 
+    item {
+        name: "Court"
+        id: 1
+    }
+</code>
