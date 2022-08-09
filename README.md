@@ -22,7 +22,7 @@ The tool I chose to annotate each image with was [MakeSense.AI](https://www.make
 The annotated images were exported in a .zip package containing files in the VOC XML format.
 
 ### Training the model:
-In order to utilize [Tensorflow’s object detection API](https://github.com/tensorflow/models/tree/master/research/object_detection), I had to convert our annotated images into `TFRecord format`.
+In order to utilize [Tensorflow’s object detection API](https://github.com/tensorflow/models/tree/master/research/object_detection), I had to convert my annotated images into `TFRecord format`.
 
 I generated a tf record from my XML format annotations with Tensor Flow's Object Detection [conversion script](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/using_your_own_dataset.md).
 
