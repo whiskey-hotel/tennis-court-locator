@@ -29,15 +29,3 @@ We only used one class, so this is a pretty simple file:
         id: 1
     }
 ~~~
-```
-    item {
-        name: "Court"
-        id: 1
-    }
-```
-<code> 
-    item {
-        name: "Court"
-        id: 1
-    }
-</code>
