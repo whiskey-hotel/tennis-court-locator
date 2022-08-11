@@ -56,7 +56,7 @@ I only used one class, so this was a pretty simple file:
 ~~~
 The tensorflow models repository provides a number of pre-trained models from the [COCO 2017 dataset](https://cocodataset.org/#home). These pre-trained models can be useful for initializing novel datasets such as mine. 
 
-I downloaded the `SSD MobileNet V2 FPNLite 640x640` model since it appear to have a decent balance of speed `39 ms` and accuracy `28.2 COCO mAP` with image inputs of 640x640.
+I downloaded the `SSD MobileNet V2 FPNLite 640x640` model since it appears to have a decent balance of speed `39 ms` and accuracy `28.2 COCO mAP` with image inputs of 640x640.
 
 I utilized the pipeline.config file from the pre-trained model and modified a few inputs:
 - I set the number of classes to 1
@@ -65,7 +65,7 @@ I utilized the pipeline.config file from the pre-trained model and modified a fe
 - I swapped the `fine_tune_checkpoint_type:` to `detection` since...
 
 ## Exporting the model
-For this project, I want to use [TensorFlow.js](https://www.tensorflow.org/js) so that I can use machine learning directly in the browser.
+For this project, I wanted to use [TensorFlow.js](https://www.tensorflow.org/js) so that I could use my trained model directly in the browser.
 
-I first had to export the model as...
+To use `TensorFlow.js`, I first had to export the model as...
 
