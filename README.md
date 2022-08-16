@@ -59,10 +59,11 @@ The tensorflow models repository provides a number of pre-trained models from th
 I downloaded the `SSD MobileNet V2 FPNLite 640x640` model since it appears to have a decent balance of speed, `39 ms` and accuracy, `28.2 COCO mAP` with image inputs of 640x640.
 
 I utilized the pipeline.config file from the pre-trained model and modified a few inputs:
-- I set the number of classes to 1
-- The batch size I used was...
-- The number of steps was...
-- I swapped the `fine_tune_checkpoint_type:` to `detection` since...
+- Paths to my model checkpoints and label map
+- I set the number of classes to 1 since I only have one class
+- The batch size I used was 21 since I trained with 147 samples and 21 is a moderate propagation size thats also divisible by 147
+- The number of steps I chose was 200,000 
+- I swapped the `fine_tune_checkpoint_type:` to `detection` to restore all weights from the checkpoint
 
 ## Exporting the model
 For this project, I wanted to use [TensorFlow.js](https://www.tensorflow.org/js) so that I could use my trained model directly in the browser.
