@@ -1,0 +1,37 @@
+<annotation>
+	<folder>tennis-locator-annotations</folder>
+	<filename>Cherry Grove East.png</filename>
+	<path>/tennis-locator-annotations/Cherry Grove East.png</path>
+	<source>
+		<database>Unspecified</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>640</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>Court</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>335</xmin>
+			<ymin>220</ymin>
+			<xmax>434</xmax>
+			<ymax>431</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Court</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>203</xmin>
+			<ymin>221</ymin>
+			<xmax>302</xmax>
+			<ymax>431</ymax>
+		</bndbox>
+	</object>
+</annotation>

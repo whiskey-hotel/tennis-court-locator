@@ -1,0 +1,37 @@
+<annotation>
+	<folder>tennis-locator-annotations</folder>
+	<filename>Willow Park.png</filename>
+	<path>/tennis-locator-annotations/Willow Park.png</path>
+	<source>
+		<database>Unspecified</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>640</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>Court</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>111</xmin>
+			<ymin>439</ymin>
+			<xmax>217</xmax>
+			<ymax>639</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Court</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>259</xmin>
+			<ymin>440</ymin>
+			<xmax>365</xmax>
+			<ymax>640</ymax>
+		</bndbox>
+	</object>
+</annotation>

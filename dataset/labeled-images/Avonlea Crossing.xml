@@ -1,0 +1,37 @@
+<annotation>
+	<folder>tennis-locator-annotations</folder>
+	<filename>Avonlea Crossing.png</filename>
+	<path>/tennis-locator-annotations/Avonlea Crossing.png</path>
+	<source>
+		<database>Unspecified</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>640</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>Court</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>250</xmin>
+			<ymin>271</ymin>
+			<xmax>302</xmax>
+			<ymax>372</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Court</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>309</xmin>
+			<ymin>270</ymin>
+			<xmax>358</xmax>
+			<ymax>371</ymax>
+		</bndbox>
+	</object>
+</annotation>

@@ -1,0 +1,25 @@
+<annotation>
+	<folder>tennis-court-locator</folder>
+	<filename>Hillside Park.png</filename>
+	<path>/tennis-court-locator/Hillside Park.png</path>
+	<source>
+		<database>Unspecified</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>640</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>Court</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>279</xmin>
+			<ymin>261</ymin>
+			<xmax>341</xmax>
+			<ymax>384</ymax>
+		</bndbox>
+	</object>
+</annotation>

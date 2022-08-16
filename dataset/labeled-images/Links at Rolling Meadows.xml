@@ -1,0 +1,37 @@
+<annotation>
+	<folder>tennis-locator-annotations</folder>
+	<filename>Links at Rolling Meadows.png</filename>
+	<path>/tennis-locator-annotations/Links at Rolling Meadows.png</path>
+	<source>
+		<database>Unspecified</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>640</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>Court</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>228</xmin>
+			<ymin>246</ymin>
+			<xmax>302</xmax>
+			<ymax>365</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Court</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>296</xmin>
+			<ymin>259</ymin>
+			<xmax>369</xmax>
+			<ymax>378</ymax>
+		</bndbox>
+	</object>
+</annotation>

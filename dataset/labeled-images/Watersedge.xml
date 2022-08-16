@@ -1,0 +1,37 @@
+<annotation>
+	<folder>tennis-locator-annotations</folder>
+	<filename>Watersedge.png</filename>
+	<path>/tennis-locator-annotations/Watersedge.png</path>
+	<source>
+		<database>Unspecified</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>640</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>Court</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>194</xmin>
+			<ymin>230</ymin>
+			<xmax>308</xmax>
+			<ymax>438</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Court</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>326</xmin>
+			<ymin>214</ymin>
+			<xmax>443</xmax>
+			<ymax>421</ymax>
+		</bndbox>
+	</object>
+</annotation>

@@ -1,0 +1,25 @@
+<annotation>
+	<folder>tennis-court-locator</folder>
+	<filename>Twin Creeks South.png</filename>
+	<path>/tennis-court-locator/Twin Creeks South.png</path>
+	<source>
+		<database>Unspecified</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>640</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>Court</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>233</xmin>
+			<ymin>174</ymin>
+			<xmax>413</xmax>
+			<ymax>398</ymax>
+		</bndbox>
+	</object>
+</annotation>

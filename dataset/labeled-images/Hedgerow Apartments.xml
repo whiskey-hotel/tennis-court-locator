@@ -1,0 +1,25 @@
+<annotation>
+	<folder>tennis-court-locator</folder>
+	<filename>Hedgerow Apartments.png</filename>
+	<path>/tennis-court-locator/Hedgerow Apartments.png</path>
+	<source>
+		<database>Unspecified</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>640</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>Court</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>291</xmin>
+			<ymin>260</ymin>
+			<xmax>341</xmax>
+			<ymax>363</ymax>
+		</bndbox>
+	</object>
+</annotation>

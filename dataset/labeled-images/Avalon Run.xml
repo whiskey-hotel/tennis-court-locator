@@ -1,0 +1,25 @@
+<annotation>
+	<folder>tennis-locator-annotations</folder>
+	<filename>Avalon Run.png</filename>
+	<path>/tennis-locator-annotations/Avalon Run.png</path>
+	<source>
+		<database>Unspecified</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>640</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>Court</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>267</xmin>
+			<ymin>254</ymin>
+			<xmax>355</xmax>
+			<ymax>374</ymax>
+		</bndbox>
+	</object>
+</annotation>

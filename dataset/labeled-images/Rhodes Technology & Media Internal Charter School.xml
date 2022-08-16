@@ -1,0 +1,37 @@
+<annotation>
+	<folder>tennis-locator-annotations</folder>
+	<filename>Rhodes Technology & Media Internal Charter School.png</filename>
+	<path>/tennis-locator-annotations/Rhodes Technology & Media Internal Charter School.png</path>
+	<source>
+		<database>Unspecified</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>640</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>Court</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>228</xmin>
+			<ymin>201</ymin>
+			<xmax>332</xmax>
+			<ymax>396</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Court</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>321</xmin>
+			<ymin>211</ymin>
+			<xmax>427</xmax>
+			<ymax>406</ymax>
+		</bndbox>
+	</object>
+</annotation>

@@ -1,0 +1,37 @@
+<annotation>
+	<folder>tennis-court-locator</folder>
+	<filename>Community Park.png</filename>
+	<path>/tennis-court-locator/Community Park.png</path>
+	<source>
+		<database>Unspecified</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>640</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>Court</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>186</xmin>
+			<ymin>209</ymin>
+			<xmax>295</xmax>
+			<ymax>428</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Court</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>317</xmin>
+			<ymin>206</ymin>
+			<xmax>426</xmax>
+			<ymax>426</ymax>
+		</bndbox>
+	</object>
+</annotation>

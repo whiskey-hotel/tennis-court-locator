@@ -1,0 +1,37 @@
+<annotation>
+	<folder>tennis-court-locator</folder>
+	<filename>La Rocca.png</filename>
+	<path>/tennis-court-locator/La Rocca.png</path>
+	<source>
+		<database>Unspecified</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>640</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>Court</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>133</xmin>
+			<ymin>269</ymin>
+			<xmax>332</xmax>
+			<ymax>467</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Court</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>237</xmin>
+			<ymin>374</ymin>
+			<xmax>436</xmax>
+			<ymax>575</ymax>
+		</bndbox>
+	</object>
+</annotation>

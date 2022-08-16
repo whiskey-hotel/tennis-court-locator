@@ -1,0 +1,25 @@
+<annotation>
+	<folder>tennis-locator-annotations</folder>
+	<filename>The Mews at Princeton Junction.png</filename>
+	<path>/tennis-locator-annotations/The Mews at Princeton Junction.png</path>
+	<source>
+		<database>Unspecified</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>640</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>Court</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>297</xmin>
+			<ymin>280</ymin>
+			<xmax>329</xmax>
+			<ymax>338</ymax>
+		</bndbox>
+	</object>
+</annotation>

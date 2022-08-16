@@ -14,8 +14,8 @@ I've identified two sources that may help with creating a dataset:
 
 With the location data, I utilized the [Google Maps static imageAPI](https://developers.google.com/maps/documentation/maps-static?csw=1) to obtain uniform PNG files of each location.
 
-For each API call, I set the size parameter as `640x640` and the map type as `satellite`.
-In order to provide variation in scale, I adjust the zoom level anywhere from `15` to `20`.
+For each API call, I set the `size` parameter as `640x640` and the map `type` as `satellite`.
+In order to provide variation in scale, I adjust the `zoom` level anywhere from `15` to `20`.
 
 Once each file is saved to the image folder, I had to manually annotate each image with a bounding box.
 The tool I chose to annotate each image with was [MakeSense.AI](https://www.makesense.ai/). 
@@ -56,7 +56,7 @@ I only used one class, so this was a pretty simple file:
 ~~~
 The tensorflow models repository provides a number of pre-trained models from the [COCO 2017 dataset](https://cocodataset.org/#home). These pre-trained models can be useful for initializing novel datasets such as mine. 
 
-I downloaded the `SSD MobileNet V2 FPNLite 640x640` model since it appears to have a decent balance of speed `39 ms` and accuracy `28.2 COCO mAP` with image inputs of 640x640.
+I downloaded the `SSD MobileNet V2 FPNLite 640x640` model since it appears to have a decent balance of speed, `39 ms` and accuracy, `28.2 COCO mAP` with image inputs of 640x640.
 
 I utilized the pipeline.config file from the pre-trained model and modified a few inputs:
 - I set the number of classes to 1

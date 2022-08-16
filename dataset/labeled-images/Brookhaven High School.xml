@@ -1,0 +1,49 @@
+<annotation>
+	<folder>tennis-court-locator</folder>
+	<filename>Brookhaven High School.png</filename>
+	<path>/tennis-court-locator/Brookhaven High School.png</path>
+	<source>
+		<database>Unspecified</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>640</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>Court</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>237</xmin>
+			<ymin>240</ymin>
+			<xmax>294</xmax>
+			<ymax>349</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Court</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>298</xmin>
+			<ymin>245</ymin>
+			<xmax>352</xmax>
+			<ymax>354</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Court</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>356</xmin>
+			<ymin>248</ymin>
+			<xmax>414</xmax>
+			<ymax>357</ymax>
+		</bndbox>
+	</object>
+</annotation>

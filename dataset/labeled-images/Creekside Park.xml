@@ -1,0 +1,37 @@
+<annotation>
+	<folder>tennis-court-locator</folder>
+	<filename>Creekside Park.png</filename>
+	<path>/tennis-court-locator/Creekside Park.png</path>
+	<source>
+		<database>Unspecified</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>640</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>Court</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>252</xmin>
+			<ymin>290</ymin>
+			<xmax>323</xmax>
+			<ymax>394</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Court</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>307</xmin>
+			<ymin>308</ymin>
+			<xmax>377</xmax>
+			<ymax>412</ymax>
+		</bndbox>
+	</object>
+</annotation>

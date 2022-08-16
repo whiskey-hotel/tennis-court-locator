@@ -1,0 +1,37 @@
+<annotation>
+	<folder>tennis-locator-annotations</folder>
+	<filename>Cottonwood Park.png</filename>
+	<path>/tennis-locator-annotations/Cottonwood Park.png</path>
+	<source>
+		<database>Unspecified</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>640</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>Court</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>300</xmin>
+			<ymin>289</ymin>
+			<xmax>323</xmax>
+			<ymax>340</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Court</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>329</xmin>
+			<ymin>289</ymin>
+			<xmax>352</xmax>
+			<ymax>338</ymax>
+		</bndbox>
+	</object>
+</annotation>

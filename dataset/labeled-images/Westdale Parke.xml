@@ -1,0 +1,37 @@
+<annotation>
+	<folder>tennis-court-locator</folder>
+	<filename>Westdale Parke.png</filename>
+	<path>/tennis-court-locator/Westdale Parke.png</path>
+	<source>
+		<database>Unspecified</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>640</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>Court</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>190</xmin>
+			<ymin>222</ymin>
+			<xmax>291</xmax>
+			<ymax>418</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Court</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>331</xmin>
+			<ymin>232</ymin>
+			<xmax>431</xmax>
+			<ymax>426</ymax>
+		</bndbox>
+	</object>
+</annotation>

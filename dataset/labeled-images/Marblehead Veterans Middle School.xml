@@ -1,0 +1,25 @@
+<annotation>
+	<folder>tennis-locator-annotations</folder>
+	<filename>Marblehead Veterans Middle School.png</filename>
+	<path>/tennis-locator-annotations/Marblehead Veterans Middle School.png</path>
+	<source>
+		<database>Unspecified</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>640</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>Court</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>128</xmin>
+			<ymin>96</ymin>
+			<xmax>332</xmax>
+			<ymax>340</ymax>
+		</bndbox>
+	</object>
+</annotation>

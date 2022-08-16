@@ -1,0 +1,25 @@
+<annotation>
+	<folder>tennis-locator-annotations</folder>
+	<filename>Palm Trace Landings.png</filename>
+	<path>/tennis-locator-annotations/Palm Trace Landings.png</path>
+	<source>
+		<database>Unspecified</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>640</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>Court</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>299</xmin>
+			<ymin>302</ymin>
+			<xmax>331</xmax>
+			<ymax>352</ymax>
+		</bndbox>
+	</object>
+</annotation>

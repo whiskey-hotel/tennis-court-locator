@@ -1,0 +1,37 @@
+<annotation>
+	<folder>tennis-court-locator</folder>
+	<filename>Windswept Townhome.png</filename>
+	<path>/tennis-court-locator/Windswept Townhome.png</path>
+	<source>
+		<database>Unspecified</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>640</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>Court</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>182</xmin>
+			<ymin>174</ymin>
+			<xmax>360</xmax>
+			<ymax>377</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Court</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>272</xmin>
+			<ymin>238</ymin>
+			<xmax>448</xmax>
+			<ymax>440</ymax>
+		</bndbox>
+	</object>
+</annotation>

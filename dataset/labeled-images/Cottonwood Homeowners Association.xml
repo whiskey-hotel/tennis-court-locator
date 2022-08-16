@@ -1,0 +1,37 @@
+<annotation>
+	<folder>tennis-locator-annotations</folder>
+	<filename>Cottonwood Homeowners Association.png</filename>
+	<path>/tennis-locator-annotations/Cottonwood Homeowners Association.png</path>
+	<source>
+		<database>Unspecified</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>640</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>Court</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>282</xmin>
+			<ymin>292</ymin>
+			<xmax>315</xmax>
+			<ymax>347</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Court</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>309</xmin>
+			<ymin>301</ymin>
+			<xmax>347</xmax>
+			<ymax>355</ymax>
+		</bndbox>
+	</object>
+</annotation>

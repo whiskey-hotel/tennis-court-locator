@@ -1,0 +1,49 @@
+<annotation>
+	<folder>tennis-locator-annotations</folder>
+	<filename>Quibbletown Middle School.png</filename>
+	<path>/tennis-locator-annotations/Quibbletown Middle School.png</path>
+	<source>
+		<database>Unspecified</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>640</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>Court</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>183</xmin>
+			<ymin>205</ymin>
+			<xmax>325</xmax>
+			<ymax>433</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Court</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>311</xmin>
+			<ymin>234</ymin>
+			<xmax>452</xmax>
+			<ymax>462</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Court</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>436</xmin>
+			<ymin>262</ymin>
+			<xmax>579</xmax>
+			<ymax>492</ymax>
+		</bndbox>
+	</object>
+</annotation>
