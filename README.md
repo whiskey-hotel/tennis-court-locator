@@ -70,13 +70,16 @@ Overall, I think the model identifies courts pretty well. The test images were a
 
 The model did really well at identifying courts with clearly defined court lines:
 ![good result image 1](dataset/results/good_result1.png)
-![good result image 2](dataset/results/good_result1.png)
-![good result image 3](dataset/results/good_result1.png)
+![good result image 2](dataset/results/good_result2.png)
+![good result image 3](dataset/results/good_result3.png)
+
+
+
 
 However, if the court was in bad shape or the quality of the image prevented the model from seeing the court lines, then the model could not identify the court within a 60% threshold:
 ![bad result image 1](dataset/results/good_result1.png)
-![bad result image 2](dataset/results/good_result1.png)
-![bad result image 3](dataset/results/good_result1.png)
+![bad result image 2](dataset/results/good_result2.png)
+![bad result image 3](dataset/results/good_result3.png)
 
 ## Exporting the model
 For this project, I wanted to use [TensorFlow.js](https://www.tensorflow.org/js) so that I could use my trained model directly in the browser.
