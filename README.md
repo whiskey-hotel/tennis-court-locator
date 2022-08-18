@@ -59,11 +59,24 @@ The tensorflow models repository provides a number of pre-trained models from th
 I downloaded the `SSD MobileNet V2 FPNLite 640x640` model since it appears to have a decent balance of speed, `39 ms` and accuracy, `28.2 COCO mAP` with image inputs of 640x640.
 
 I utilized the pipeline.config file from the pre-trained model and modified a few inputs:
-- Paths to my model checkpoints and label map
+- I input paths to my model checkpoints and label map
 - I set the number of classes to 1 since I only have one class
-- The batch size I used was 21 since I trained with 147 samples and 21 is a moderate propagation size thats also divisible by 147
+- I used a batch size of 21 initially, however, this used too much memory for google colab, so I reduced the size to 7. Since I trained with 147 samples, 7 is a moderate propagation size that suits the system memory and is also divisible by 147
 - The number of steps I chose was 200,000 
 - I swapped the `fine_tune_checkpoint_type:` to `detection` to restore all weights from the checkpoint
+
+### Testing the model
+Overall, I think the model identifies courts pretty well. The test images were a decent mix of high quality photos with well defined court lines as well as poor quality photos and/or poorly defined court lines.
+
+The model did really well at identifying courts with clearly defined court lines:
+!(good result image 1)[/Users/justin/TheOdinProject/tennis-court-locator/dataset/results/good_result1.png]
+!(good result image 2)[/Users/justin/TheOdinProject/tennis-court-locator/dataset/results/good_result1.png]
+!(good result image 3)[/Users/justin/TheOdinProject/tennis-court-locator/dataset/results/good_result1.png]
+
+However, if the court was in bad shape or the quality of the image prevented the model from seeing the court lines, then the model could not identify the court within a 60% threshold:
+!(bad result image 1)[/Users/justin/TheOdinProject/tennis-court-locator/dataset/results/good_result1.png]
+!(bad result image 2)[/Users/justin/TheOdinProject/tennis-court-locator/dataset/results/good_result1.png]
+!(bad result image 3)[/Users/justin/TheOdinProject/tennis-court-locator/dataset/results/good_result1.png]
 
 ## Exporting the model
 For this project, I wanted to use [TensorFlow.js](https://www.tensorflow.org/js) so that I could use my trained model directly in the browser.

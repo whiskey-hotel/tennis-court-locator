@@ -10,7 +10,7 @@ data = json.load(jsonFile)
 api_key = os.environ.get("Google_API_KEY")
 
 url = "https://maps.googleapis.com/maps/api/staticmap?"
-zoom = '20'
+zoom = '19'
 maptype = 'satellite'
 size = '640x640'
 # 242 - 281 zoom = 20
@@ -23,13 +23,13 @@ size = '640x640'
 
 #78 photos removed due to poor quality
 
-for i in range(241,282): 
+for i in range(282,283): 
     lat = data[i]['latitude']
     long = data[i]['longitude']
     name = data[i]['name']
 
     r = requests.get(f"{url}center={lat},{long}&zoom={zoom}&size={size}&maptype={maptype}&key={api_key}") 
-    f = open(f'tennis-court-locator/dataset/images/new/{name}.png', 'wb') 
+    f = open(f'tennis-court-locator/dataset/images/{name}.png', 'wb') 
     
     f.write(r.content) 
     f.close() 
