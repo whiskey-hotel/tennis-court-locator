@@ -84,5 +84,6 @@ However, if the court was in bad shape or the quality of the image prevented the
 ## Exporting the model
 For this project, I wanted to use [TensorFlow.js](https://www.tensorflow.org/js) so that I could use my trained model directly in the browser.
 
-To use `TensorFlow.js`, I first had to export the model as...
+To use `TensorFlow.js`, I first had to convert my saved model to Tensorflow.js layers format. To do this, I had to utilize the [TensorFlow.js converter](https://github.com/tensorflow/tfjs/tree/master/tfjs-converter).
 
+I tried to do this on my local machine, but there doesn't appear to be support for `Apple M1 chips`, so this was completed in `Google colab`.
