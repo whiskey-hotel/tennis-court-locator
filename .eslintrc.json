@@ -1,0 +1,37 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "jest": true
+  },
+  "extends": ["airbnb-base"],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "rules": {
+    "object-curly-newline": [
+      "error",
+      {
+        "ObjectPattern": { "multiline": false }
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "parser": "@typescript-eslint/parser",
+      "plugins": ["@typescript-eslint/eslint-plugin"],
+      "extends": ["airbnb-typescript/base"],
+      "parserOptions": {
+        "project": "tennis-court-locator/tsconfig.json"
+      },
+      "rules": {
+        "@typescript-eslint/lines-between-class-members": "off"
+      }
+    }
+  ]
+  
+}
+

@@ -4,7 +4,7 @@ I started this project to help identify local tennis courts in my area. Many of 
 
 With this project, I will be able to identify all local tennis courts without the added effort of scrolling through aerial satellite images or driving around in my car.
 
-## Methods:
+## Model Methods:
 ### The dataset:
 The process of identifying tennis courts will require a bit of machine learning with object detection. 
 To my knowledge, a dataset that includes aerial images of tennis courts does not exist, therefore, I will have to create my own.
@@ -87,3 +87,5 @@ For this project, I wanted to use [TensorFlow.js](https://www.tensorflow.org/js)
 To use `TensorFlow.js`, I first had to convert my saved model to Tensorflow.js layers format. To do this, I had to utilize the [TensorFlow.js converter](https://github.com/tensorflow/tfjs/tree/master/tfjs-converter).
 
 I tried to do this on my local machine, but there doesn't appear to be support for `Apple M1 chips`, so this was completed in `Google colab`.
+
+## Mapping service
