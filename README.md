@@ -89,3 +89,6 @@ To use `TensorFlow.js`, I first had to convert my saved model to Tensorflow.js l
 I tried to do this on my local machine, but there doesn't appear to be support for `Apple M1 chips`, so this was completed in `Google colab`.
 
 ## Mapping service
+The main mapping service I utilized was [Leaflet](https://leafletjs.com/index.html). The service is open-source and comes with tons of interactive features. 
+
+The map tile imagery service I used came from the [ArcGIS World Imagery map server](http://leaflet-extras.github.io/leaflet-providers/preview/#filter=Esri).
