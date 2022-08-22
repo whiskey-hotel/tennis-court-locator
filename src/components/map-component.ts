@@ -1,9 +1,6 @@
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
-import 'esri-leaflet';
-import 'esri-leaflet-vector/dist/esri-leaflet-vector';
 import * as elementBuilder from '../modules/elementBuilder';
-import 'leaflet-providers';
 
 const mapContainer: HTMLElement = elementBuilder.newElement({
   element: 'div',

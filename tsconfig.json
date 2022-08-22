@@ -6,6 +6,7 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "sourceMap": true,
+    "moduleResolution": "node",
   },
   "include": ["./src/**/*"],
   "exclude": [

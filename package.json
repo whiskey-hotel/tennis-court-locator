@@ -13,14 +13,10 @@
   "author": "Justin Thornton",
   "license": "ISC",
   "dependencies": {
+    "@arcgis/core": "^4.24.7",
     "@tensorflow/tfjs": "^3.19.0",
-    "@types/esri-leaflet": "^2.1.9",
-    "@types/leaflet-providers": "^1.2.1",
     "dotenv": "^16.0.1",
-    "esri-leaflet": "^3.0.8",
-    "esri-leaflet-vector": "^3.1.4",
     "leaflet": "^1.8.0",
-    "leaflet-providers": "^1.13.0",
     "source-map-loader": "^4.0.0",
     "ts-loader": "^9.3.1"
   },
