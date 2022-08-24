@@ -1,14 +1,13 @@
-import MapImageLayer from '@arcgis/core/layers/MapImageLayer';
+import domtoimage from 'dom-to-image';
 
-const getImage = async (extent, url: string) => {
-  const layer = new MapImageLayer({
-    url,
-  });
+const getImage = async (mapElement: HTMLElement) => {
+  const width = mapElement.clientWidth;
+  const height = mapElement.clientHeight;
+  const image = new Image();
 
-  const height = 640;
-  const width = 640;
-
-  const dataImageObject = await layer.fetchImage(extent, height, width);
-  return dataImageObject;
+  const dataImageURL = await domtoimage.toPng(mapElement, { width, height });
+  image.src = await dataImageURL;
+  document.body.appendChild(image);
+  return image;
 };
 export default getImage;

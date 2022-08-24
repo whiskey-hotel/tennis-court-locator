@@ -4,13 +4,27 @@ body {
   padding: 0;
   margin: 0;
 }
-#main{
-  height:100%;
+
+#main {
+  height: 100%;
 }
+
 #map {
   margin-left: auto;
   margin-right: auto;
   z-index: 0;
   height: 70%;
   width: 70%;
+}
+
+#searchButton {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  left: 0;
+  padding: 10px;
+  z-index: 500;
+  margin: auto;
+  width: fit-content;
+  cursor: pointer;
 }
