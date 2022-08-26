@@ -97,3 +97,13 @@ The map tile imagery service I used came from the [ArcGIS World Imagery map serv
 In order to load the model, I had to refer back to the model type.
 When I initially trained and exported the python model, the input format was tf_saved_model.
 When I converted the model for tensorflow.js with the conversion wizard, an output flag was not provided. However, [this tensorflow guide](https://github.com/tensorflow/tfjs/blob/master/tfjs-converter/README.md) states that `Unless stated otherwise, we can infer the value of --output_format from the value of --input_format. So the --output_format flag can be omitted in most cases.`Based on the table in the guide, the infered output format is in the TensorFlow.js `graph model format`. So I had to use [`tf.loadGraphModel()`](https://js.tensorflow.org/api/latest/#loadGraphModel) to load the model.
+
+When running the model against the `asyncExecute` method, the 8 output tensors are partially labeled. 3 tensors are given an arbitrary name. This appears to be an issue that occurred during the model conversion process. After reviewing this [tfjs issue](https://github.com/tensorflow/tfjs/issues/3942), I mapped my missing tensors with the identified tensors in [this](https://github.com/tensorflow/tfjs/issues/3942#issuecomment-728013232) answer. 
+
+The `saved_model` output matched my `graph_model` output almost exactly. So I made the assumption that the missing Tensor labels are the following:
+
+~~~
+    Identity:0 => detection_anchor_indices
+    Identity_2 => detection_classes
+    Identity_4 => detection_scores
+~~~
