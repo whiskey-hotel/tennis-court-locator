@@ -92,3 +92,8 @@ I tried to do this on my local machine, but there doesn't appear to be support f
 The main mapping component library I used was [Leaflet](https://leafletjs.com/index.html). The library is open-source and comes with tons of interactive features and useful plugins. 
 
 The map tile imagery service I used came from the [ArcGIS World Imagery map server](http://leaflet-extras.github.io/leaflet-providers/preview/#filter=Esri).
+
+## Running the model
+In order to load the model, I had to refer back to the model type.
+When I initially trained and exported the python model, the input format was tf_saved_model.
+When I converted the model for tensorflow.js with the conversion wizard, an output flag was not provided. However, [this tensorflow guide](https://github.com/tensorflow/tfjs/blob/master/tfjs-converter/README.md) states that `Unless stated otherwise, we can infer the value of --output_format from the value of --input_format. So the --output_format flag can be omitted in most cases.`Based on the table in the guide, the infered output format is in the TensorFlow.js `graph model format`. So I had to use [`tf.loadGraphModel()`](https://js.tensorflow.org/api/latest/#loadGraphModel) to load the model.

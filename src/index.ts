@@ -2,6 +2,7 @@ import { mapRender, mapContainer } from './components/map-component';
 import './index.css';
 import * as elementBuilder from './modules/elementBuilder';
 import getImage from './modules/captureImage';
+import detect from './modules/runModel';
 
 const main: HTMLElement = elementBuilder.newElement({
   element: 'div',
@@ -16,5 +17,7 @@ mapRender();
 const searchButton = document.getElementById('searchButton');
 searchButton.addEventListener('click', () => {
   const mapElement = document.getElementById('map');
-  getImage(mapElement);
+  getImage(mapElement).then((image) => {
+    detect(image);
+  });
 });
