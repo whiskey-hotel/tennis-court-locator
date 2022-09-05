@@ -9,9 +9,13 @@ body {
   height: 100%;
 }
 
+#mapContainer{
+height: 100%;
+display: flex;
+justify-content: center;
+}
+
 #map {
-  margin-left: auto;
-  margin-right: auto;
   z-index: 0;
   height: 70%;
   width: 70%;
@@ -27,4 +31,41 @@ body {
   margin: auto;
   width: fit-content;
   cursor: pointer;
+}
+
+.loaderContainer {
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 2000000000;
+}
+
+.loader {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border: 20px solid #eaf0f6;
+  border-radius: 50%;
+  border-top: 20px solid #ff7a59;
+  width: 200px;
+  height: 200px;
+  animation: spinner 4s linear infinite;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }

@@ -53,17 +53,17 @@ const detect = async (imageElement: HTMLImageElement) => {
   const prediction = await model.executeAsync(newTensor);
 
   const boxes = prediction[0].dataSync(); // detection_boxes: coordinates of the detection boxes in the image.
+  const classes = prediction[3].dataSync(); // detection_classes: detection-level class labels.
+  const scores = prediction[6].dataSync(); // detection_scores: detection scores for the detection boxes in the image.
   //   const rawScores = prediction[1]; // raw_detection_scores: contains class score logits for raw detection boxes.
   //   const rawBoxes = prediction[2]; //   raw_detection_boxes: contains decoded detection boxes without Non-Max suppression.
-  const classes = prediction[3].dataSync(); // detection_classes: detection-level class labels.
   //   const numDetections = prediction[4].dataSync(); // num_detections: number of detections in the batch.
   //   const identity0 = prediction[5].dataSync(); // detection_anchor_indices: The anchor indices of the detections after NMS.
-  const scores = prediction[6].dataSync(); // detection_scores: detection scores for the detection boxes in the image.
   //   const multiClassScores = prediction[7].dataSync(); // detection_multiclass_scores: class score distribution (including background)
   // for detection boxes in the image including background class.
 
   const detectionObjects = buildDetectedObjects(scores, imageWidth, imageHeight, boxes, classes);
-
+  console.log(detectionObjects);
   return detectionObjects;
 };
 
