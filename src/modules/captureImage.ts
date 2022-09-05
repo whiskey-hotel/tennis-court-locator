@@ -6,7 +6,7 @@ const getImage = async (mapElement: HTMLElement) => {
   const image = new Image();
 
   const dataImageURL = await domtoimage.toPng(mapElement, { width, height });
-  image.src = await dataImageURL;
+  image.src = dataImageURL;
   document.body.appendChild(image);
   return image;
 };

@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-import * as tf from '@tensorflow/tfjs';
+import { loadGraphModel, browser } from '@tensorflow/tfjs';
 
 const classesDir = {
   1: {
@@ -12,10 +12,10 @@ const buildDetectedObjects = (
   scores: number[],
   imageWidth: number,
   imageHeight: number,
-  boxes: [],
-  classes,
+  boxes: number[],
+  classes: {},
 ) => {
-  const threshold = 0.0025;
+  const threshold = 0.25;
   const detectionObjects = [];
   scores.forEach((score, i) => {
     if (score > threshold) {
@@ -43,12 +43,12 @@ const buildDetectedObjects = (
 };
 
 const detect = async (imageElement: HTMLImageElement) => {
-  const model = await tf.loadGraphModel(
+  const model = await loadGraphModel(
     'https://raw.githubusercontent.com/whiskey-hotel/tennis-court-locator/main/web_model/model.json',
   );
   const imageWidth = imageElement.clientWidth;
   const imageHeight = imageElement.clientHeight;
-  const imageTensor = tf.browser.fromPixels(imageElement);
+  const imageTensor = browser.fromPixels(imageElement);
   const newTensor = imageTensor.expandDims();
   const prediction = await model.executeAsync(newTensor);
 
@@ -63,10 +63,8 @@ const detect = async (imageElement: HTMLImageElement) => {
   // for detection boxes in the image including background class.
 
   const detectionObjects = buildDetectedObjects(scores, imageWidth, imageHeight, boxes, classes);
-  console.log(detectionObjects);
-  //   console.log(boxes);
-  //   console.log(scores);
-  //   console.log(classes);
+
+  return detectionObjects;
 };
 
 export default detect;

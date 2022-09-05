@@ -3,6 +3,7 @@ import './index.css';
 import * as elementBuilder from './modules/elementBuilder';
 import getImage from './modules/captureImage';
 import detect from './modules/runModel';
+import { drawDetections, clearMap } from './modules/draw';
 
 const main: HTMLElement = elementBuilder.newElement({
   element: 'div',
@@ -12,12 +13,13 @@ const main: HTMLElement = elementBuilder.newElement({
 elementBuilder.moduleRender({ mapContainer }, main);
 elementBuilder.sendToBody(main);
 
-mapRender();
+const map = mapRender();
 
 const searchButton = document.getElementById('searchButton');
-searchButton.addEventListener('click', () => {
+searchButton.addEventListener('click', async () => {
   const mapElement = document.getElementById('map');
-  getImage(mapElement).then((image) => {
-    detect(image);
-  });
+  clearMap(map);
+  const image = await getImage(mapElement);
+  const detections = await detect(image);
+  drawDetections(map, detections);
 });
