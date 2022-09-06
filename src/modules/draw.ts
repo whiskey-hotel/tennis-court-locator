@@ -9,11 +9,12 @@ const drawDetections = (map: L.Map, detectionObject: any[]) => {
     const y = detection.bbox[1];
     const x2 = detection.bbox[2] + x;
     const y2 = detection.bbox[3] + y;
-    const point1 = L.point(x, y);
-    const point2 = L.point(x2, y2);
-    const corner1 = map.layerPointToLatLng(point1);
-    const corner2 = map.layerPointToLatLng(point2);
-    const bounds = L.latLngBounds(corner1, corner2);
+    const SWPoint = L.point(x, y2);
+    const NEPoint = L.point(x2, y);
+    const SWCorner = map.layerPointToLatLng(SWPoint);
+    const NECorner = map.layerPointToLatLng(NEPoint);
+    const bounds = L.latLngBounds(SWCorner, NECorner);
+    console.log(bounds);
     L.rectangle(bounds, { color, weight: 1 }).addTo(map);
   });
 };

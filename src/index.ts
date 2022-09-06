@@ -5,13 +5,14 @@ import getImage from './modules/captureImage';
 import detect from './modules/runModel';
 import { drawDetections, clearMap } from './modules/draw';
 import loaderContainer from './components/loader';
+import searchContainer from './components/search';
 
 const main: HTMLElement = elementBuilder.newElement({
   element: 'div',
   elementID: 'main',
 });
 
-elementBuilder.moduleRender({ mapContainer }, main);
+elementBuilder.moduleRender({ searchContainer, mapContainer }, main);
 elementBuilder.sendToBody(main);
 
 const map = mapRender();

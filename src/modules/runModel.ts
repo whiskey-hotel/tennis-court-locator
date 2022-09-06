@@ -46,8 +46,8 @@ const detect = async (imageElement: HTMLImageElement) => {
   const model = await loadGraphModel(
     'https://raw.githubusercontent.com/whiskey-hotel/tennis-court-locator/main/web_model/model.json',
   );
-  const imageWidth = imageElement.clientWidth;
-  const imageHeight = imageElement.clientHeight;
+  const imageWidth = imageElement.naturalWidth;
+  const imageHeight = imageElement.naturalHeight;
   const imageTensor = browser.fromPixels(imageElement);
   const newTensor = imageTensor.expandDims();
   const prediction = await model.executeAsync(newTensor);
