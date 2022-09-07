@@ -14,7 +14,6 @@ const drawDetections = (map: L.Map, detectionObject: any[]) => {
     const SWCorner = map.containerPointToLatLng(SWPoint);
     const NECorner = map.containerPointToLatLng(NEPoint);
     const bounds = L.latLngBounds(SWCorner, NECorner);
-    console.log(bounds);
     L.rectangle(bounds, { color, weight: 1 }).addTo(map);
   });
 };

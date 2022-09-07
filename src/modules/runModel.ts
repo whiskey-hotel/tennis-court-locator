@@ -15,7 +15,7 @@ const buildDetectedObjects = (
   boxes: number[],
   classes: {},
 ) => {
-  const threshold = 0.25;
+  const threshold = 0.5;
   const detectionObjects = [];
   scores.forEach((score, i) => {
     if (score > threshold) {

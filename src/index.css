@@ -20,6 +20,8 @@ align-items: center;
   z-index: 0;
   height: 70%;
   width: 70%;
+  max-width: 640px;
+  max-height: 640px;
 }
 
 #searchButton {

@@ -107,3 +107,16 @@ The `saved_model` output matched my `graph_model` output almost exactly. So I ma
     Identity_2 => detection_classes
     Identity_4 => detection_scores
 ~~~
+
+When I run the model in the browser, good results are heavily dependent on the size of the input image. 
+The model returns the best results when the input image is less than or equal to `640 x 640`.
+In addition, the map must be set to maximum or near maximum zoom for good results.
+This significantly reduces the opportunity to discover tennis courts over a large area. 
+
+To increase the performance of the model, I think additional training images are necessary.
+
+## Improvements
+I trained the model with 147 images.
+I'll need to annotate more images (500 - 1000 at a minimum) to train the object detection model in the future.
+In addition, i'll need more high quality images taken at higher elevations than the previous images.
+There are memory and computation time constraints with `Google Colab`, so until the `TensorFlow Object Detection API` is made compatible with `Apple Silicon`, I will have to wait to train the model again. 
