@@ -116,7 +116,24 @@ This significantly reduces the opportunity to discover tennis courts over a larg
 To increase the performance of the model, I think additional training images are necessary.
 
 ## Improvements
+
+### Re-train the model
 I trained the model with 147 images.
 I'll need to annotate more images (500 - 1000 at a minimum) to train the object detection model in the future.
 In addition, i'll need more high quality images taken at higher elevations than the previous images.
 There are memory and computation time constraints with `Google Colab`, so until the `TensorFlow Object Detection API` is made compatible with `Apple Silicon`, I will have to wait to train the model again. 
+
+### Multiple image inputs
+Another potential improvement could include capturing multiple images of the map and running an inference on each image.
+This could satisfy the image sizing issue (less than or equal to `640 x 640`) and could scan a much larger area.
+However, running multiple inferences could increase execution time. I could potentially run each inference in parallel if memory and cpu load doesn't present itself as issues.
+
+### SAHI
+Small object detection and inference on large images appear to be a common issue in computer vision. 
+An interesting [article](https://blog.ml6.eu/how-to-detect-small-objects-in-very-large-images-70234bab0f98) details the concept of `Slicing-Aided Hyper Inference (SAHI)`. 
+
+~~~
+    SAHI’s sliced predictions break down the input image into slightly overlapping patches, performs prediction on each patch and finally merges the annotations for each patch to visualize them on the original image.
+~~~
+
+The [SAHI Github repo](https://github.com/obss/sahi) shows that the inference works on a handful of popular model formats. In order to use SAHI, I would need to retrain or convert (if possible) my model to a compatible format. However, I would not be able to run inference directly in the browser like `Tensorflow.js`.
