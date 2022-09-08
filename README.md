@@ -133,7 +133,9 @@ Small object detection and inference on large images appear to be a common issue
 An interesting [article](https://blog.ml6.eu/how-to-detect-small-objects-in-very-large-images-70234bab0f98) details the concept of `Slicing-Aided Hyper Inference (SAHI)`. 
 
 ~~~
-    SAHI’s sliced predictions break down the input image into slightly overlapping patches, performs prediction on each patch and finally merges the annotations for each patch to visualize them on the original image.
+    SAHI’s sliced predictions break down the input image into slightly overlapping patches, 
+    performs prediction on each patch and finally merges the annotations for each patch to 
+    visualize them on the original image.
 ~~~
 
 The [SAHI Github repo](https://github.com/obss/sahi) shows that the inference works on a handful of popular model formats. In order to use SAHI, I would need to retrain or convert (if possible) my model to a compatible format. However, I would not be able to run inference directly in the browser like `Tensorflow.js`.
