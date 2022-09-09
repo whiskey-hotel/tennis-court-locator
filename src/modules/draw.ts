@@ -7,8 +7,8 @@ const drawDetections = (map: L.Map, detectionObject: any[]) => {
   detectionObject.forEach((detection) => {
     const x = detection.bbox[0];
     const y = detection.bbox[1];
-    const x2 = detection.bbox[2] + x;
-    const y2 = detection.bbox[3] + y;
+    const x2 = detection.bbox[2];
+    const y2 = detection.bbox[3];
     const SWPoint = L.point(x, y2);
     const NEPoint = L.point(x2, y);
     const SWCorner = map.containerPointToLatLng(SWPoint);

@@ -19,16 +19,11 @@ const buildDetectedObjects = (
   const detectionObjects = [];
   scores.forEach((score, i) => {
     if (score > threshold) {
-      const bbox = [];
       const minY = boxes[i * 4] * imageHeight;
       const minX = boxes[i * 4 + 1] * imageWidth;
       const maxY = boxes[i * 4 + 2] * imageHeight;
       const maxX = boxes[i * 4 + 3] * imageWidth;
-      bbox[0] = minX;
-      bbox[1] = minY;
-      bbox[2] = maxX - minX;
-      bbox[3] = maxY - minY;
-      // format is bbox:[x,y,width,height]
+      const bbox = [minX, minY, maxX, maxY];
 
       detectionObjects.push({
         class: classes[i],
