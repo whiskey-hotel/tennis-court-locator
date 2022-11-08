@@ -9,6 +9,22 @@ body {
   height: 100%;
 }
 
+header{
+  display: flex;
+  justify-content: center;
+}
+
+#searchContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#dropdown>*{
+  display: flex;
+  flex-direction: column;
+}
+
 #mapContainer{
 height: 100%;
 display: flex;

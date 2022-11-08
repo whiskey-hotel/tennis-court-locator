@@ -17,6 +17,10 @@ module.exports = {
     clean: true,
   },
   devtool: 'inline-source-map',
+  devServer: {
+    liveReload: true,
+    watchFiles: ['src/*'],
+  },
   resolve: {
     extensions: ['.ts', '.js'],
   },

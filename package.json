@@ -8,7 +8,8 @@
     "test-coverage": "jest --collectCoverage",
     "build": "webpack",
     "watch": "webpack --watch",
-    "lint": "npx eslint"
+    "lint": "npx eslint",
+    "dev": "npx webpack serve --live-reload"
   },
   "author": "Justin Thornton",
   "license": "ISC",
@@ -46,6 +47,7 @@
     "ts-node": "^10.9.1",
     "typescript": "^4.7.4",
     "webpack": "^5.74.0",
-    "webpack-cli": "^4.10.0"
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.11.1"
   }
 }

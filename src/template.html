@@ -15,27 +15,37 @@
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
+    <header>
+      <h1 id="title">Tennis Court Locator</h1>
+    </header>
     <div id="main">
       <div id="searchContainer" class="input-group mb-3">
         <div id="errorBar"></div>
-
-        
+        <div id="dropdown">
         <form id="searchForm" onsubmit="return false" novalidate="">
           <input
-            id="searchBar"
-            type="text"
-            placeholder="Search a US City"
-            required=""
-            autocomplete="off"
+          id="searchBar"
+          type="text"
+          placeholder="Search a US City"
+          required=""
+          autocomplete="off"
           />
         </form>
+      <div id="results"></div>
+      </div>   
+    </div>
+        <h2>Number of detections:</h2>
+
+        <div id="mapContainer">
+          <div id="map">
+            <button id="searchButton">Search this area</button>
+          </div>
+        </div>
 
       </div>
-      <div id="mapContainer">
-        <div id="map">
-          <button id="searchButton">Search this area</button>
-        </div>
-      </div>
+
+      
+
     </div>
   </body>
 </html>
