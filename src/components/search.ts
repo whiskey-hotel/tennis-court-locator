@@ -64,27 +64,32 @@
 //   // the method presents no results element
 //   noResults: ({ currentValue, template }) => template(`<li class="dropdown-item">No results found: "${currentValue}"</li>`),
 // });
+declare global {
+  interface Window {
+    Autocomplete: any;
+  }
+}
+let map: L.Map;
 
 const mapImport = (windowMap: L.Map) => {
   // a wrapper function to import the intialized leaflet map without
   // altering any AUTOCOMPLETE source code
-  const map: L.Map = windowMap;
-  return map;
+  map = windowMap;
   // auto();
 };
 
 const maxResults = 5;
-const country = 'USA';
 const apiKey = process.env.HERE_API_KEY;
 
 const dropdown = document.getElementById('results');
+const searchForm = document.getElementById('searchForm');
 const searchBox = document.getElementById('searchBar');
 
-function removeAllChildNodes(parent) {
+const removeAllChildNodes = (parent) => {
   while (parent.firstChild) {
     parent.removeChild(parent.firstChild);
   }
-}
+};
 
 searchBox.addEventListener('input', async (e) => {
   if (dropdown.firstChild) {
@@ -94,21 +99,32 @@ searchBox.addEventListener('input', async (e) => {
   const input = e.target.value;
   try {
     if (!input) return;
-    const autocompleteRequest = await fetch(
-      `https://autocomplete.geocoder.ls.hereapi.com/6.2/suggest.json?apiKey=${apiKey}&query=${input}&maxresults=${maxResults}&country=${country}&beginHighlight=<b>&endHighlight=</b>`,
+    const autosuggestRequest = await fetch(
+      `https://autosuggest.search.hereapi.com/v1/autosuggest?&limit=${maxResults}&lang=en&at=40.7499,-73.847&q=${input}&apiKey=${apiKey}`,
       { mode: 'cors' },
     );
 
-    const autocompleteResponse = await autocompleteRequest.json();
+    const autosuggestResponse = await autosuggestRequest.json();
 
-    if (autocompleteResponse.suggestions.length === 0) throw new Error('City not Found.');
+    if (autosuggestResponse.items.length === 0) throw new Error('City not Found.');
 
     // @ts-ignore
     // eslint-disable-next-line @typescript-eslint/dot-notation
-    autocompleteResponse.suggestions.forEach((result, index) => {
+    autosuggestResponse.items.forEach((result, index) => {
       const listResult = document.createElement('span');
-      listResult.textContent = result.label;
+      const labelResult = result.address.label;
+      const placeID = result.id;
+
+      listResult.innerHTML = labelResult;
       listResult.id = `result-${index}`;
+      listResult.dataset.value = placeID;
+
+      listResult.addEventListener('click', () => {
+        // @ts-ignore
+        searchBox.value = labelResult;
+        searchBox.dataset.value = placeID;
+        removeAllChildNodes(dropdown);
+      });
 
       dropdown.appendChild(listResult);
     });
@@ -119,12 +135,22 @@ searchBox.addEventListener('input', async (e) => {
   }
 });
 
-// const geocodeRequest = `https://geocode.search.hereapi.com/v1/geocode?q=Invalidenstr+117+Berlin&apiKey=${apiKey}`;
-// const autosuggestRequest = `https://autosuggest.search.hereapi.com/v1/autosuggest?&limit=${maxResults}&lang=en&at=40.7499,-73.847&q=${input}&apiKey=${apiKey}`;
+searchForm.addEventListener('submit', async () => {
+  try {
+    const geocodeRequest = await fetch(
+      // @ts-ignore
+      `https://geocode.search.hereapi.com/v1/geocode?q=${searchBox.value}&apiKey=${apiKey}`,
+      { mode: 'cors' },
+    );
+
+    const geocodeResponse = await geocodeRequest.json();
+
+    const { lat } = geocodeResponse.items[0].position;
+    const { lng } = geocodeResponse.items[0].position;
+    map.setView([lat, lng], 17);
+  } catch (error) {
+    console.log(error);
+  }
+});
 
 export default mapImport;
-// https://autocomplete.geocoder.ls.hereapi.com/6.2/suggest.json?apiKey=SNTYP9caYOkohkWRtYNUIi3MniJlU3uThWLmnw4ELBk&query=austin&maxresults=10&country=USA&beginHighlight=<b>&endHighlight=</b>
-// autocomplete to geocode
-
-// or autosuggest
-// map.getCenter()
