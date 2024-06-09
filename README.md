@@ -24,7 +24,7 @@ The annotated images were exported in a .zip package containing files in the VOC
 ### Training the model:
 For training my model, I wanted to use the [Tensorflow’s object detection API](https://github.com/tensorflow/models/tree/master/research/object_detection). It comes pre-packaged with a lot of helpful utility functions that simplify the development process.
 
-In order to use TensorFlow on my system (macOS), I had to install `Miniforge` to create a separate environment and then follow the [TensorFlow Installation Guide](https://developer.apple.com/metal/tensorflow-plugin/) for getting setup.
+In order to use TensorFlow on my system (macOS), I had to install [Miniforge](https://github.com/conda-forge/miniforge) to create a separate environment and then follow the [TensorFlow Installation Guide](https://developer.apple.com/metal/tensorflow-plugin/) for getting setup.
 
 I created the environment with:
 ~~~
