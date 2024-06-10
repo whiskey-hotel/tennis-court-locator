@@ -138,4 +138,15 @@ An interesting [article](https://blog.ml6.eu/how-to-detect-small-objects-in-very
     visualize them on the original image.
 ~~~
 
+June 9, 2024:
+
+New workflow options:
+- use new dataset from kaggle (many more annotated images)
+   - option 1
+1) train Using Apple’s Core ML
+2) Convert Core ML to TensorFlow.js
+   - option2
+1) Train a Model in PyTorch
+2) Export to ONNX and use ONNX.js to run the model in the browser.
+
 The [SAHI Github repo](https://github.com/obss/sahi) shows that the inference works on a handful of popular model formats. In order to use SAHI, I would need to retrain or convert (if possible) my model to a compatible format. However, I would not be able to run inference directly in the browser like `Tensorflow.js`.
